@@ -14,5 +14,13 @@
     "sharif elkassed",
     "sharif",
     "elkassed"
-  ]
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "repository": "selkasse/sharif",
+  "author": {
+    "name": "Sharif Elkassed",
+    "email": "selkasse@gmu.edu",
+    "url": "https://linkedin/in/selkassed"
+  }
 }
