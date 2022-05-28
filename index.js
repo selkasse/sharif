@@ -13,9 +13,9 @@ I like bridging systems and ideas together to further my skillset.
 I'm always looking for that next challenge.
 
 
-🧙  ${chalk.green("GitHub:")}   https://github.com/selkasse
-⏩  ${chalk.blue("LinkedIn:")} https://linkedin.com/in/selkassed
-🌍  ${chalk.magenta("Website:")}  https://saleshorse.org
+🧙  ${chalk.cyan("GitHub:")}   https://github.com/selkasse
+⏩  ${chalk.blueBright("LinkedIn:")} https://linkedin.com/in/selkassed
+🌍  ${chalk.magentaBright("Website:")}  https://saleshorse.org
 
 `);
 //* To make the file executable:
