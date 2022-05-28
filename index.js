@@ -51,7 +51,7 @@ ${symbol.info} ${info(` INFO `)} I'm creating skyshell...
 
 ${symbol.warning} ${warning(` WARNING `)} It's not for the faint of heart
 
-${symbol.error} ${error(` I've had to much coffee `)}
+${symbol.error} ${error(` I've had too much coffee `)}
 `);
 //* To make the file executable:
 //? From the terminal, run:
