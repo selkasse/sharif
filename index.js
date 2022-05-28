@@ -4,11 +4,6 @@ const figlet = require("figlet");
 const welcome = require("cli-welcome");
 const pkgJSON = require("./package.json");
 
-// console.log(`
-// NAME: ${pkgJSON.name}
-// VERSION: ${pkgJSON.version}
-// DESCRIPTION: ${pkgJSON.description}
-// `);
 welcome({
   title: pkgJSON.name,
   tagLine: "Not to be confused with sheriff... 🤠",
