@@ -15,7 +15,7 @@ const linkedIn = chalk.hex("#00a0dc").bold.inverse;
 const website = chalk.hex("#A357EBf").bold.inverse;
 const dim = chalk.dim;
 
-//test commen
+//test comme
 
 //* Run the code in an IIFE so it does not pollute the global namespace
 (() => {
