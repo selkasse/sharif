@@ -3,6 +3,7 @@ const chalk = require("chalk");
 const figlet = require("figlet");
 const welcome = require("cli-welcome");
 const pkgJSON = require("./package.json");
+const alert = require("sharif-cli-alerts");
 
 //* Alerts
 const symbol = require("log-symbols");
@@ -44,15 +45,7 @@ I'm always looking for that next challenge.`)}
 
 `);
 
-console.log(`
-${symbol.success} ${success(` SUCCESS `)} Thanks for checking out my CLI!
-
-${symbol.info} ${info(` INFO `)} I'm creating skyshell...
-
-${symbol.warning} ${warning(` WARNING `)} It's not for the faint of heart
-
-${symbol.error} ${error(` I've had too much coffee `)}
-`);
+alert({ type: `info`, msg: `https://skyshell.tech`, name: ` COMING SOON ` });
 //* To make the file executable:
 //? From the terminal, run:
 //* chmod +x index.js
