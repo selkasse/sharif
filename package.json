@@ -9,5 +9,10 @@
     "chalk": "^4.1.2",
     "cli-welcome": "^2.2.2",
     "figlet": "^1.5.2"
-  }
+  },
+  "keywords": [
+    "sharif elkassed",
+    "sharif",
+    "elkassed"
+  ]
 }
