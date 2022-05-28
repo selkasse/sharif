@@ -1,6 +1,6 @@
 {
   "name": "sharif",
-  "version": "1.2.1",
+  "version": "1.3.0",
   "description": "Get to know Sharif by running `npx sharif`",
   "bin": {
     "sharif": "index.js"
