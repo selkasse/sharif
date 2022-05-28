@@ -4,9 +4,16 @@ const figlet = require("figlet");
 const welcome = require("cli-welcome");
 const pkgJSON = require("./package.json");
 
+//* Alerts
+const symbol = require("log-symbols");
+const success = chalk.green.inverse;
+const warning = chalk.keyword("orange").inverse;
+const info = chalk.blue.inverse;
+const error = chalk.red.bold.inverse;
+
 welcome({
   title: `Sharif Elkassed`,
-  tagLine: "Not to be confused with sheriff... 🤠",
+  tagLine: `Not to be confused with sheriff... 🤠`,
   description: pkgJSON.description,
   bgColor: "#21C7A8",
   color: "#d7ff00",
@@ -35,6 +42,16 @@ I'm always looking for that next challenge.`)}
   " https://saleshorse.org"
 )}
 
+`);
+
+console.log(`
+${symbol.success} ${success(` SUCCESS `)} Thanks for checking out my CLI!
+
+${symbol.info} ${info(` INFO `)} I'm creating skyshell...
+
+${symbol.warning} ${warning(` WARNING `)} It's not for the faint of heart
+
+${symbol.error} ${error(` I've had to much coffee `)}
 `);
 //* To make the file executable:
 //? From the terminal, run:
