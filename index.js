@@ -6,7 +6,7 @@ console.log(chalk.cyanBright(figlet.textSync("sharif")));
 console.log(chalk.blueBright(figlet.textSync("   elkassed")));
 
 console.log(`
-Sharif Elkassed
+I'm Sharif Elkassed :)
 
 I like bridging systems and ideas together to further my skillset.
 
