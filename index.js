@@ -27,7 +27,7 @@ console.log(chalk.blueBright.bold(figlet.textSync("   elkassed")));
 
 // I'm ${chalk.keyword("blue").bgCyan.bold(" Sharif Elkassed ")} :)
 console.log(`
-${chalk.italic(`I like bridging systems and ideas together to further my skillset.
+${chalk.italic(`I like bridging ideas and systems together to further my skillset.
 
 I'm always looking for that next challenge.`)}
 
