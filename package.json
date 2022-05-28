@@ -1,0 +1,11 @@
+{
+  "name": "sharif",
+  "version": "1.0.0",
+  "bin": {
+    "sharif": "index.js"
+  },
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "figlet": "^1.5.2"
+  }
+}
