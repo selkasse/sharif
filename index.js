@@ -2,6 +2,7 @@
 const chalk = require("chalk");
 const figlet = require("figlet");
 const alert = require("sharif-cli-alerts");
+const handleError = require("cli-handle-error");
 
 const init = require("./utils/init");
 
@@ -22,16 +23,19 @@ const dim = chalk.dim;
   console.log(blueBright(figlet.textSync("   elkassed")));
 
   console.log(`
-${italic(`I like bridging ideas and systems together to further my skillset.
+  ${italic(`I like bridging ideas and systems together to further my skillset.
 
-I'm always looking for that next challenge.`)}
+  I'm always looking for that next challenge.`)}
 
+  🧙  ${gitHub(" GitHub   ")}   ${dim("https://github.com/selkasse")}
+  ⏩  ${linkedIn(" LinkedIn ")} ${dim("  https://linkedin.com/in/selkassed")}
+  🌍  ${website(" Website  ")}  ${dim(" https://saleshorse.org")}
 
-🧙  ${gitHub(" GitHub   ")}   ${dim("https://github.com/selkasse")}
-⏩  ${linkedIn(" LinkedIn ")} ${dim("  https://linkedin.com/in/selkassed")}
-🌍  ${website(" Website  ")}  ${dim(" https://saleshorse.org")}
-
-`);
+  `);
 
   alert({ type: `info`, msg: `https://skyshell.tech`, name: ` COMING SOON ` });
+
+  //! ERROR HANDLING EXAMPLE -- DO NOT DELETE
+  // const err = new Error(`Something went wrong`);
+  // handleError("CUSTOM ERROR", err, false, false);
 })();
