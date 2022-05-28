@@ -1,11 +1,13 @@
 {
   "name": "sharif",
   "version": "1.0.4",
+  "description": "Get to know Sharif by running `npx sharif`",
   "bin": {
     "sharif": "index.js"
   },
   "dependencies": {
     "chalk": "^4.1.2",
+    "cli-welcome": "^2.2.2",
     "figlet": "^1.5.2"
   }
 }

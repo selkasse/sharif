@@ -1,8 +1,26 @@
 #!/usr/bin/env node
 const chalk = require("chalk");
 const figlet = require("figlet");
+const welcome = require("cli-welcome");
+const pkgJSON = require("./package.json");
 
+// console.log(`
+// NAME: ${pkgJSON.name}
+// VERSION: ${pkgJSON.version}
+// DESCRIPTION: ${pkgJSON.description}
+// `);
+welcome({
+  title: pkgJSON.name,
+  tagLine: "Not to be confused with sheriff... 🤠",
+  description: pkgJSON.description,
+  bgColor: "#d7ff00",
+  color: "#d7ff00",
+  bold: true,
+  clear: true,
+  version: pkgJSON.version,
+});
 console.log(chalk.cyanBright(figlet.textSync("sharif")));
+
 console.log(chalk.blueBright(figlet.textSync("   elkassed")));
 
 console.log(`
