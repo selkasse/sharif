@@ -2,6 +2,7 @@
 const chalk = require("chalk");
 const figlet = require("figlet");
 const alert = require("sharif-cli-alerts");
+//! Do not remove -- error handling example at end of file
 const handleError = require("cli-handle-error");
 
 const init = require("./utils/init");
