@@ -5,30 +5,35 @@ const welcome = require("cli-welcome");
 const pkgJSON = require("./package.json");
 
 welcome({
-  title: pkgJSON.name,
+  title: `Sharif Elkassed`,
   tagLine: "Not to be confused with sheriff... 🤠",
   description: pkgJSON.description,
-  bgColor: "#d7ff00",
+  bgColor: "#21C7A8",
   color: "#d7ff00",
   bold: true,
   clear: true,
   version: pkgJSON.version,
 });
-console.log(chalk.cyanBright(figlet.textSync("sharif")));
+console.log(chalk.cyanBright.bold(figlet.textSync("sharif")));
 
-console.log(chalk.blueBright(figlet.textSync("   elkassed")));
+console.log(chalk.blueBright.bold(figlet.textSync("   elkassed")));
 
+// I'm ${chalk.keyword("blue").bgCyan.bold(" Sharif Elkassed ")} :)
 console.log(`
-I'm Sharif Elkassed :)
+${chalk.italic(`I like bridging systems and ideas together to further my skillset.
 
-I like bridging systems and ideas together to further my skillset.
-
-I'm always looking for that next challenge.
+I'm always looking for that next challenge.`)}
 
 
-🧙  ${chalk.cyan("GitHub:")}   https://github.com/selkasse
-⏩  ${chalk.cyanBright("LinkedIn:")} https://linkedin.com/in/selkassed
-🌍  ${chalk.greenBright("Website:")}  https://saleshorse.org
+🧙  ${chalk.hex("#6cc644").bold.inverse(" GitHub   ")}   ${chalk.dim(
+  "https://github.com/selkasse"
+)}
+⏩  ${chalk.hex("#00a0dc").bold.inverse(" LinkedIn ")} ${chalk.dim(
+  "  https://linkedin.com/in/selkassed"
+)}
+🌍  ${chalk.hex("#A357EBf").bold.inverse(" Website  ")}  ${chalk.dim(
+  " https://saleshorse.org"
+)}
 
 `);
 //* To make the file executable:
