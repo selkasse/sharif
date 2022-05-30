@@ -6,6 +6,7 @@ import handleError from 'cli-handle-error'
 import init from './utils/init.js'
 import * as data from './utils/data.js'
 import cli from './utils/cli.js'
+import debug from './utils/debug.js'
 
 const input = cli.input
 const flags = cli.flags
@@ -13,6 +14,8 @@ const flags = cli.flags
 //* Run the code in an IIFE so it does not pollute the global namespace
 ;(() => {
   init()
+
+  input.includes('help') && cli.showHelp(0)
 
   console.log(data.ASCII_FIRST_NAME)
   console.log(data.ASCII_LAST_NAME)
@@ -31,12 +34,5 @@ const flags = cli.flags
     })
   }
 
-  if (flags.debug) {
-    alert({
-      type: `info`,
-      msg: ` CLI DATA ⬇️ `,
-    })
-    console.log(`input`, input)
-    console.log(`flags`, flags)
-  }
+  debug(flags.debug, cli)
 })()

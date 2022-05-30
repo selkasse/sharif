@@ -20,7 +20,8 @@ const bio = `
 const social = `  
   🧙  ${gitHub(' GitHub   ')}   ${dim('https://github.com/selkasse')}
   ⏩  ${linkedIn(' LinkedIn ')} ${dim('  https://linkedin.com/in/selkassed')}
-  🌍  ${website(' Website  ')}  ${dim(' https://saleshorse.org')}`
+  🌍  ${website(' Website  ')}  ${dim(' https://saleshorse.org')}
+  `
 
 const promo = `https://skyshell.tech`
 
