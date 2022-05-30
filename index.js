@@ -13,26 +13,20 @@ const flags = cli.flags
 
 //* Run the code in an IIFE so it does not pollute the global namespace
 ;(() => {
-  init()
+  init(flags, data)
 
   input.includes('help') && cli.showHelp(0)
 
-  console.log(data.ASCII_FIRST_NAME)
-  console.log(data.ASCII_LAST_NAME)
+  flags.bio && console.log(data.bio)
 
-  console.log(data.bio)
+  flags.social && console.log(data.social)
 
-  if (flags.social) {
-    console.log(data.social)
-  }
-
-  if (flags.promo) {
+  flags.promo &&
     alert({
       type: `info`,
       msg: `${data.promo}`,
       name: ` COMING SOON `,
     })
-  }
 
   debug(flags.debug, cli)
 })()
