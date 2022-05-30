@@ -6,7 +6,8 @@ import checkNode from 'cli-check-node'
 import boxen from 'boxen'
 import unhandled from 'cli-handle-unhandled'
 
-const pkgJSON = JSON.parse(readFileSync('./package.json'))
+const fileURL = new URL('../package.json', import.meta.url)
+const pkgJSON = JSON.parse(readFileSync(fileURL))
 
 export default ({ minimal, clear }, data) => {
   unhandled()
