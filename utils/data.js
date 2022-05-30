@@ -1,5 +1,5 @@
-const chalk = require('chalk')
-const figlet = require('figlet')
+import chalk from 'chalk'
+import figlet from 'figlet'
 
 const cyanBright = chalk.cyanBright.bold
 const blueBright = chalk.blueBright.bold
@@ -24,10 +24,4 @@ const social = `
 
 const promo = `https://skyshell.tech`
 
-module.exports = {
-  ASCII_FIRST_NAME,
-  ASCII_LAST_NAME,
-  bio,
-  social,
-  promo,
-}
+export { ASCII_FIRST_NAME, ASCII_LAST_NAME, bio, social, promo }

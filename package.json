@@ -2,17 +2,19 @@
   "name": "sharif",
   "version": "1.7.1",
   "description": "Get to know Sharif by running `npx sharif`",
+  "type": "module",
   "bin": {
     "sharif": "index.js"
   },
   "dependencies": {
-    "chalk": "^4.1.2",
+    "chalk": "^5.0.1",
     "cli-check-node": "^1.3.4",
     "cli-handle-error": "^4.4.0",
     "cli-handle-unhandled": "^1.1.1",
     "cli-welcome": "^2.2.2",
     "figlet": "^1.5.2",
     "log-symbols": "^4.1.0",
+    "meow": "^10.1.2",
     "sharif-cli-alerts": "^1.0.1"
   },
   "keywords": [
@@ -27,5 +29,8 @@
     "name": "Sharif Elkassed",
     "email": "selkasse@gmu.edu",
     "url": "https://linkedin/in/selkassed"
+  },
+  "scripts": {
+    "prepare": "process.env.NODE_NO_WARNINGS=1"
   }
 }

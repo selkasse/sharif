@@ -1,9 +1,26 @@
-#!/usr/bin/env node
-const alert = require('sharif-cli-alerts')
-const handleError = require('cli-handle-error')
+#!/usr/bin/env -S node --no-warnings
+import alert from 'sharif-cli-alerts'
+import handleError from 'cli-handle-error'
+import meow from 'meow'
 
-const init = require('./utils/init')
-const data = require('./utils/data')
+import init from './utils/init.js'
+import * as data from './utils/data.js'
+
+const helpText = `RUN: npx sharif`
+const options = {
+  importMeta: import.meta,
+  flags: {
+    social: {
+      type: `boolean`,
+      default: true,
+    },
+    promo: {
+      type: `boolean`,
+      default: true,
+    },
+  },
+}
+const cli = meow(helpText, options)
 
 //* Run the code in an IIFE so it does not pollute the global namespace
 ;(() => {
@@ -20,4 +37,10 @@ const data = require('./utils/data')
     msg: `${data.promo}`,
     name: ` COMING SOON `,
   })
+
+  alert({
+    type: `info`,
+    msg: `CLI DATA ⬇️`,
+  })
+  // console.log(`CLI DATA: ${JSON.stringify(cli)}`)
 })()
