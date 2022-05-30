@@ -1,7 +1,12 @@
+import { readFileSync } from 'fs'
+
 import welcome from 'cli-welcome'
-import pkgJSON from '../package.json' assert { type: 'json' }
+// import pkgJSON from '../package.json' assert { type: 'json' }
 import checkNode from 'cli-check-node'
+import boxen from 'boxen'
 import unhandled from 'cli-handle-unhandled'
+
+const pkgJSON = JSON.parse(readFileSync('./package.json'))
 
 export default ({ minimal, clear }, data) => {
   unhandled()
@@ -28,5 +33,5 @@ export default ({ minimal, clear }, data) => {
   !minimal && console.log(data.ASCII_FIRST_NAME)
   !minimal && console.log(data.ASCII_LAST_NAME)
 
-  minimal && console.log(`Sharif Elkassed`)
+  minimal && console.log(boxen(`Sharif Elkassed`, { padding: 1 }))
 }

@@ -1,5 +1,6 @@
 import chalk from 'chalk'
 import figlet from 'figlet'
+import boxen from 'boxen'
 
 const cyanBright = chalk.cyanBright.bold
 const blueBright = chalk.blueBright.bold
@@ -17,11 +18,14 @@ const bio = `
 
   I'm always looking for that next challenge.`)}`
 
-const social = `  
-  🧙  ${gitHub(' GitHub   ')}   ${dim('https://github.com/selkasse')}
-  ⏩  ${linkedIn(' LinkedIn ')} ${dim('  https://linkedin.com/in/selkassed')}
-  🌍  ${website(' Website  ')}  ${dim(' https://saleshorse.org')}
-  `
+const social = boxen(
+  `  
+  🧙  ${gitHub(' GitHub   ')}   ${dim('https://github.com/selkasse  ')}
+  ⏩  ${linkedIn(' LinkedIn ')} ${dim('  https://linkedin.com/in/selkassed  ')}
+  🌍  ${website(' Website  ')}  ${dim(' https://saleshorse.org  ')}
+  `,
+  { borderColor: 'cyan' }
+)
 
 const promo = `https://skyshell.tech`
 
