@@ -1,6 +1,6 @@
 {
   "name": "sharif",
-  "version": "1.7.1",
+  "version": "2.0.0",
   "description": "Get to know Sharif by running `npx sharif`",
   "type": "module",
   "bin": {
