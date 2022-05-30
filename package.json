@@ -29,8 +29,5 @@
     "name": "Sharif Elkassed",
     "email": "selkasse@gmu.edu",
     "url": "https://linkedin/in/selkassed"
-  },
-  "scripts": {
-    "prepare": "process.env.NODE_NO_WARNINGS=1"
   }
 }

@@ -1,4 +1,5 @@
 #!/usr/bin/env -S node --no-warnings
+
 import alert from 'sharif-cli-alerts'
 import handleError from 'cli-handle-error'
 import meow from 'meow'
