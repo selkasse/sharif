@@ -2,26 +2,13 @@
 
 import alert from 'sharif-cli-alerts'
 import handleError from 'cli-handle-error'
-import meow from 'meow'
 
 import init from './utils/init.js'
 import * as data from './utils/data.js'
+import cli from './utils/cli.js'
 
-const helpText = `RUN: npx sharif`
-const options = {
-  importMeta: import.meta,
-  flags: {
-    social: {
-      type: `boolean`,
-      default: true,
-    },
-    promo: {
-      type: `boolean`,
-      default: true,
-    },
-  },
-}
-const cli = meow(helpText, options)
+const input = cli.input
+const flags = cli.flags
 
 //* Run the code in an IIFE so it does not pollute the global namespace
 ;(() => {
@@ -31,17 +18,25 @@ const cli = meow(helpText, options)
   console.log(data.ASCII_LAST_NAME)
 
   console.log(data.bio)
-  console.log(data.social)
 
-  alert({
-    type: `info`,
-    msg: `${data.promo}`,
-    name: ` COMING SOON `,
-  })
+  if (flags.social) {
+    console.log(data.social)
+  }
 
-  alert({
-    type: `info`,
-    msg: `CLI DATA ⬇️`,
-  })
-  // console.log(`CLI DATA: ${JSON.stringify(cli)}`)
+  if (flags.promo) {
+    alert({
+      type: `info`,
+      msg: `${data.promo}`,
+      name: ` COMING SOON `,
+    })
+  }
+
+  if (flags.debug) {
+    alert({
+      type: `info`,
+      msg: ` CLI DATA ⬇️ `,
+    })
+    console.log(`input`, input)
+    console.log(`flags`, flags)
+  }
 })()
