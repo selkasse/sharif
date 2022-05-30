@@ -11,6 +11,5 @@ export default (isDebug, cli) => {
   })
   console.log(`input`, input)
   console.log(`flags`, flags)
-  // console.log(cli)
   console.log()
 }
