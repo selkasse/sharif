@@ -9,8 +9,8 @@ export default (isDebug, cli) => {
     type: `warning`,
     msg: ` DEBUG ⬇️ `,
   })
-  // console.log(`input`, input)
-  // console.log(`flags`, flags)
-  console.log(cli)
+  console.log(`input`, input)
+  console.log(`flags`, flags)
+  // console.log(cli)
   console.log()
 }
