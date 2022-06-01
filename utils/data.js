@@ -16,7 +16,8 @@ const ASCII_LAST_NAME = blueBright(figlet.textSync('   elkassed'))
 const bio = `
   ${italic(`I like bridging ideas and systems together to further my skillset.
 
-  I'm always looking for that next challenge.`)}`
+  I'm always looking for that next challenge.`)}
+  `
 
 const social = boxen(
   `  
