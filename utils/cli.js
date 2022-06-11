@@ -1,6 +1,7 @@
 import meow from 'meow'
 import meowHelp from 'cli-meow-help'
 import chalk from 'chalk'
+import makeFooter from 'cli-footer'
 
 const flags = {
   bio: {
@@ -36,7 +37,6 @@ const flags = {
   },
   version: {
     type: `boolean`,
-    default: false,
     alias: `v`,
     desc: `Print the CLI version`,
   },
@@ -44,24 +44,16 @@ const flags = {
 
 const commands = {
   help: {
-    desc: `Print the help info\n\n${chalk
-      .hex(`#3FA4A6`)
-      .bold(`NOTE:`)} ${chalk.yellow(
-      `--no`
-    )} can be prepended to any boolean option\n(if the default value is ${chalk.dim.yellow(
-      `true`
-    )})\n\nThis will toggle the value to ${chalk.dim.yellow(`false`)}\n\n${chalk
-      .hex(`#3FA4A6`)
-      .bold.dim(`Example:`)} ${chalk.green(`npx sharif`)} ${chalk.yellow(
-      `--no-bio --no-promo --no-social`
-    )}`,
+    desc: `Print the help info`,
   },
 }
+const footer = makeFooter('sharif', flags)
 
 const helpText = meowHelp({
   name: `npx sharif`,
   flags,
   commands,
+  footer,
 })
 
 const options = {
